@@ -9,12 +9,14 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
 }
+
 
 h1,
 h2,
@@ -52,11 +54,11 @@ h6 {
 }
 
 a {
-    text-decoration: none;
+   text-decoration: none;
 }
 
 .main-bg {
-    background-image: url(../img/background.svg);
+    background-image: url(../img/foto-home.jpg);
     background-size: cover;
     background-position: center center;
     color: white;
@@ -72,8 +74,9 @@ a {
     min-height: 100vh;
 }
 
+
 .menu {
-    background: white;
+    background: rgb(147, 166, 142);
     position: fixed;
     color: black;
     top: 0;
@@ -81,6 +84,7 @@ a {
     right: 0;
     width: 100%;
     border-bottom: 1px solid #EEE;
+    z-index: 1;
 }
 
 .menu-content {
@@ -89,6 +93,10 @@ a {
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.space {
+    height: 85px;
 }
 
 .menu h1 {
@@ -127,4 +135,13 @@ a {
 .menu ul li a:hover::after {
     left: 25%;
     width: 50%;
+}
+
+.inicio h2, .inicio p {
+    color: black;
+    text-align: center;  
+}
+
+.inicio h2 {
+    margin-top: 14rem;
 }
