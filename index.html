@@ -6,42 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KL Decor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <aside class="menu">
-        <div class="general-content menu-content">
-            <h1><a href="#">Logo KL DECOR</a></h1>
-
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#">Orçamento</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
-
-
     <section id="inicio" class="screen-size main-bg">
-        <div class="space"></div>
-        <div class="general-content inicio-content">
-            <h2>Arquitetura & Engenharia</h2>
-            <p>Projetos arquitetônicos, Estruturais, Instalações, Emissão de alvará e carta de habite-se </p>
-        </div>
+        <aside class="menu-aside">
+            <div class="menu-content general-content">
+                <h1><a href="#">Logo KL DECOR</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#orcamento">Orçamento</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
     </section>
 
     <section id="projetos" class="screen-size">
-        <div class="space"></div>
+        <div class="espace-top"></div>
         <div class="general-content projects-content">
             <h2>Projetos</h2>
             <p>Todos os projetos abaixo foram realizados pela KL Decor e seus profissionais</p>
@@ -66,6 +53,31 @@
                     <img src="https://source.unsplash.com/random/364x346?r=6" alt="random image">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="orcamento" class="screen-size">
+
+        <div class="espace-top"></div>
+        <div class="general-content orcamento-content">
+            <h2>SOLICITAR ORÇAMENTO</h2>
+
+            <form action="/" method="post" class="form-request">
+
+                <label for="input-person-name">Nome</label>
+                <input type="text" name="input-person-name" id="input-person-name" class="inputs">
+
+                <label for="input-person-email">Email</label>
+                <input type="email" name="input-person-email" id="input-person-email" class="inputs">
+
+                <label for="input-person-telefone">Telefone</label>
+                <input type="number" name="input-person-telefone" id="input-person-telefone" class="inputs">
+
+                <label for="input-person-description">Descricao</label>
+                <input type="text" name="input-person-name" id="input-person-name" class="inputs input-description">
+
+                <button type="submit" class="submit-button">Solicitar</button>
+            </form>
         </div>
     </section>
 </body>

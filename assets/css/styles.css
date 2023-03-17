@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:wght@400;700&display=swap');
+
 :root {
     --gap: 3rem;
 }
@@ -5,11 +7,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    color: black;
 }
 
 body {
@@ -18,12 +22,7 @@ body {
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2{
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -36,23 +35,6 @@ h2 {
     font-size: 5.5rem;
 }
 
-h3 {
-    font-size: 5rem;
-}
-
-h4 {
-    font-size: 4.5rem;
-}
-
-h5 {
-    font-size: 4rem;
-
-}
-
-h6 {
-    font-size: 3.5rem;
-}
-
 a {
    text-decoration: none;
 }
@@ -61,27 +43,21 @@ a {
     background-image: url(../img/foto-home.jpg);
     background-size: cover;
     background-position: center center;
-    color: white;
 }
 
 .general-content {
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
 }
 
 .screen-size {
     min-height: 100vh;
 }
 
-
-.menu {
-    background: rgb(147, 166, 142);
+.menu-aside {
+    background: rgb(71, 114, 91);
+    font-weight: bold;
     position: fixed;
-    color: black;
-    top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     border-bottom: 1px solid #EEE;
     z-index: 1;
@@ -91,13 +67,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-
-.space {
-    height: 85px;
 }
 
 .grid {
@@ -106,51 +75,42 @@ a {
     align-items: center;
     gap: var(--gap);
 }
-.menu h1 {
+.menu-content h1 {
     font-size: 2.3rem;
 }
 
-.menu h1 a {
+.menu-content h1 a {
     color: inherit;
 }
 
 
-.menu ul {
+.menu-content ul {
     list-style: none;
     display: flex;
 }
 
-.menu ul li a {
+.menu-content ul li a {
     display: block;
     padding: 30px;
     font-size: 1.8rem;
-    color: black;
+    color: inherit;
     position: relative;
 }
 
-.menu ul li a::after {
+.menu-content ul li a::after {
     content: '';
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.7rem;
     left: 50%;
     width: 0;
-    height: 0.2rem;
-    background: crimson;
-    transition: all 300ms ease-in-out;
+    height: 0.3rem;
+    background: rgb(53, 21, 3);
+    transition: all 400ms ease-in-out;
 }
 
-.menu ul li a:hover::after {
+.menu-aside ul li a:hover::after {
     left: 25%;
     width: 50%;
-}
-
-.inicio-content h2, .inicio-content p {
-    color: black;
-    text-align: center;  
-}
-
-.inicio-content h2 {
-    margin-top: 14rem;
 }
 
 .projects-img {
@@ -158,21 +118,69 @@ a {
     overflow: hidden;
 }
 
-.projects-img  img{
-    transition: all 300ms ease-in-out;
-}
-
 .projects-img  img:hover{
+    transition: all 300ms ease-in-out;
     transform: scale(1.2);
 }
 
 
 .projects-content h2, .projects-content  p {
-    color: black;
     text-align: center;  
-    margin-bottom: 2rem;
 }
 
 .projects-content  p { 
     margin-bottom: 3rem;
+}
+
+.espace-top {
+    padding-top: 100px;
+}
+
+.orcamento-content{
+    background: rgba(192, 197, 194, 0.7);
+    border-radius: 15px;
+    height: 62rem;
+    margin-top: 4rem;
+}
+.orcamento-content h2{
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.form-request {
+    padding: 2rem;
+    width: 100%;
+}
+
+.form-request label{
+    margin-left: 11.5rem;
+}
+
+.inputs {
+    display: block;
+    margin: 1.2rem auto;
+    width: 80%;
+    height: 3.5rem;
+    font-size: 2rem;
+}
+
+.input-description {
+    height: 14rem;
+}
+
+.submit-button {
+    height: 4rem;
+    width: 10rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    font-weight: bold;
+    background: rgb(111, 163, 135);
+    margin-top: 1rem;
+    margin-left: 94rem;
+}
+
+.submit-button:hover {
+    cursor: pointer;   
 }
