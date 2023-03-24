@@ -28,11 +28,14 @@ h1, h2{
 
 h1 {
     font-size: 6rem;
-    text-transform: uppercase;
 }
 
 h2 {
     font-size: 5.5rem;
+}
+
+h3 {
+    font-size: 5rem;
 }
 
 a {
@@ -69,17 +72,23 @@ a {
     align-items: center;
 }
 
-.grid {
+.inicio-content {
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.grid-projetos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: var(--gap);
 }
-.menu-content h1 {
+.menu-content h2 {
     font-size: 2.3rem;
+    text-transform: uppercase;
 }
 
-.menu-content h1 a {
+.menu-content h2 a {
     color: inherit;
 }
 
@@ -99,18 +108,16 @@ a {
 
 .menu-content ul li a::after {
     content: '';
-    position: absolute;
-    bottom: 1.7rem;
-    left: 50%;
     width: 0;
     height: 0.3rem;
     background: rgb(53, 21, 3);
-    transition: all 400ms ease-in-out;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
 }
 
 .menu-aside ul li a:hover::after {
-    left: 25%;
-    width: 50%;
+    width: 100%;
 }
 
 .projects-img {
@@ -183,4 +190,63 @@ a {
 
 .submit-button:hover {
     cursor: pointer;   
+}
+
+.grid-sobre {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding-top: 5rem;
+    gap: var(--gap);
+}
+
+.colunm1-grid-sobre {
+    background: #eee;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.colunm1-grid-sobre p {
+    padding-top: 3rem;
+    line-height: 3.5rem;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.imagem-mulher {
+    margin: 2rem;
+}
+
+.imagem-mulher img{
+    width: 42rem;
+    height: 39rem;
+}
+
+.flex-contato {
+    height: 63rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-copiright{
+    background: rgb(71, 114, 91);
+    border-top: 1px solid rgba(0, 0, 0, 0);
+}
+
+.footer-copiright p{
+    font-size: 2rem;
+    font-weight: bold;
+    height: 8rem;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
 }
