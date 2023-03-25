@@ -307,7 +307,7 @@ a {
         position: fixed;
         z-index: 2;
         top: 2rem;
-        right: 3rem;
+        right: 2rem;
         background: rgb(111, 163, 135);
         color: white;
         font-size: 3rem;
@@ -329,8 +329,8 @@ a {
     }
 
     .whatsapp-button {
-        bottom: 3rem;
-        right: 3rem;
+        bottom: 2rem;
+        right: 2rem;
     }
 
     .espace-top {
@@ -468,6 +468,10 @@ a {
     .contato-icons img {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    .footer-copiright p {
+        padding-top: 1.5rem;
     }
 
 }
