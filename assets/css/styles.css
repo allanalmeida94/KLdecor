@@ -22,7 +22,8 @@ body {
 }
 
 
-h1, h2{
+h1,
+h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -39,7 +40,7 @@ h3 {
 }
 
 a {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 .main-bg {
@@ -58,7 +59,7 @@ a {
 }
 
 .menu-aside {
-    background: rgb(71, 114, 91, 0.8);
+    background: rgb(71, 114, 91);
     font-weight: bold;
     position: fixed;
     width: 100%;
@@ -83,6 +84,7 @@ a {
     align-items: center;
     gap: var(--gap);
 }
+
 .menu-content h2 {
     font-size: 2.3rem;
     text-transform: uppercase;
@@ -125,31 +127,33 @@ a {
     overflow: hidden;
 }
 
-.projects-img  img:hover{
+.projects-img img:hover {
     transition: all 300ms ease-in-out;
     transform: scale(1.2);
 }
 
 
-.projects-content h2, .projects-content  p {
-    text-align: center;  
+.projects-content h2,
+.projects-content p {
+    text-align: center;
 }
 
-.projects-content  p { 
+.projects-content p {
     margin-bottom: 3rem;
 }
 
 .espace-top {
-    padding-top: 100px;
+    padding-top: 10rem;
 }
 
-.orcamento-content{
+.orcamento-content {
     background: rgba(192, 197, 194, 0.7);
     border-radius: 15px;
     height: 62rem;
     margin-top: 5rem;
 }
-.orcamento-content h2{
+
+.orcamento-content h2 {
     padding-top: 3rem;
     text-align: center;
     font-size: 4rem;
@@ -160,7 +164,7 @@ a {
     width: 100%;
 }
 
-.form-request label{
+.form-request label {
     margin-left: 11.5rem;
 }
 
@@ -189,7 +193,7 @@ a {
 }
 
 .submit-button:hover {
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 .grid-sobre {
@@ -216,7 +220,7 @@ a {
     margin: 2rem;
 }
 
-.imagem-mulher img{
+.imagem-mulher img {
     width: 42rem;
     height: 39rem;
 }
@@ -248,21 +252,21 @@ a {
     color: black;
 }
 
-.contato-icons a{
+.contato-icons a {
     color: inherit;
 }
 
-.contato-icons img{
+.contato-icons img {
     width: 1.5rem;
     height: 1.5rem;
 }
 
 
-.footer-copiright{
+.footer-copiright {
     background: rgb(71, 114, 91);
 }
 
-.footer-copiright p{
+.footer-copiright p {
     font-size: 2rem;
     font-weight: bold;
     height: 8rem;
@@ -275,4 +279,188 @@ a {
     bottom: 2rem;
     right: 2rem;
     z-index: 9999;
+}
+
+.close-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    .menu-aside {
+        display: none;
+        text-align: center;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: rgb(111, 163, 135);
+        color: white;
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu-aside {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .espace-top {
+        padding-top: 2rem;
+    }
+
+    .inicio-content {
+        margin-top: 18rem;
+    }
+
+    .inicio-content h2 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* TELA PROJETOS */
+
+    .grid-projetos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .projects-content h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-content p {
+        font-size: 1.6rem;
+    }
+
+    .projects-img img{
+        width: 41.2rem;
+        height: 30rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .projects-img img:hover {
+        transition: none;
+        transform: none;
+    }
+
+    /* TELA ORÇAMENTOS */
+
+    .orcamento-content {
+        margin-top: 12.5rem;
+    }
+
+    .orcamento-content h2 {
+        font-size: 3rem;
+        margin: 0 1rem;
+    }
+    
+    .form-request label {
+        margin-left: 0;
+    }
+     
+    .inputs {
+        margin: 1.2rem 0;
+        width: 100%;
+        height: 3.2rem;
+        font-size: 1.8rem;
+    }
+    
+    .input-description {
+        height: 12rem;
+    }
+    
+    .submit-button {
+        height: 3rem;
+        width: 9rem;
+        font-size: 1.8rem;
+        border-radius: 1rem;
+        margin-left: 28rem;
+    }
+
+    /* TELA SOBRE*/
+
+    .grid-sobre {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+    }
+    
+    .colunm1-grid-sobre {
+        padding: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .colunm1-grid-sobre p {
+        line-height: 3rem;
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .colunm1-grid-sobre h3 {
+        font-size: 3rem;
+    }
+
+    .imagem-mulher {
+        margin: 1rem;
+    }
+    
+    .imagem-mulher img {
+        width: 39rem;
+        height: 36rem;
+    }
+
+    /* TELA CONTATO*/
+
+    .flex-contato {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        line-height: 3rem;
+    }
+    
+    .flex-contato h4 {
+        font-size: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contato-lists li {
+        list-style: none;
+    }
+    
+    .contato-lists li a {
+        color: inherit;
+    }
+    
+    .contato-icons img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
 }
