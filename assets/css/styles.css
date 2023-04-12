@@ -42,6 +42,14 @@ h3 {
 a {
     text-decoration: none;
 }
+textarea {
+    resize: none;
+}
+
+.asteristic {
+    color: red;
+    font-size: 1.6rem;
+}
 
 .main-bg {
     background-image: url(../img/foto-home.jpg);
@@ -149,7 +157,7 @@ a {
 .orcamento-content {
     background: rgba(192, 197, 194, 0.7);
     border-radius: 15px;
-    height: 62rem;
+    height: 65rem;
     margin-top: 5rem;
 }
 
@@ -159,13 +167,13 @@ a {
     font-size: 4rem;
 }
 
-.form-request {
+#form {
     padding: 2rem;
     width: 100%;
 }
 
-.form-request label {
-    margin-left: 11.5rem;
+#form label {
+    margin-left: 11.6rem;
 }
 
 .inputs {
@@ -178,6 +186,13 @@ a {
 
 .input-description {
     height: 14rem;
+}
+
+.span-required {
+    font-size: 1.2rem;
+    margin-left: 11.6rem; 
+    color: red;
+    display: none;
 }
 
 .submit-button {
@@ -308,7 +323,7 @@ a {
         z-index: 2;
         top: 2rem;
         right: 2rem;
-        background: rgb(111, 163, 135);
+        background: rgb(71, 114, 91);
         color: white;
         font-size: 3rem;
         line-height: 3rem;
@@ -376,6 +391,14 @@ a {
 
     /* TELA ORÇAMENTOS */
 
+    #form label {
+        margin-left: 0;
+    }
+
+    .span-required {
+        margin-left: 0;    
+    }
+
     .orcamento-content {
         margin-top: 12.5rem;
     }
@@ -385,8 +408,205 @@ a {
         margin: 0 1rem;
     }
 
-    .form-request label {
+    .inputs {
+        margin: 1.2rem 0;
+        width: 100%;
+        height: 3.2rem;
+        font-size: 1.8rem;
+    }
+
+    .input-description {
+        height: 12rem;
+    }
+
+    .submit-button {
+        height: 3rem;
+        width: 9rem;
+        font-size: 1.8rem;
+        border-radius: 1rem;
+        margin-top: 4rem;
+    }
+
+    /* TELA SOBRE*/
+
+    .grid-sobre {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+    }
+
+    .colunm1-grid-sobre {
+        padding: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .colunm1-grid-sobre p {
+        line-height: 3rem;
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .colunm1-grid-sobre h3 {
+        font-size: 3rem;
+    }
+
+    .imagem-mulher {
+        margin: 1rem;
+    }
+
+    .imagem-mulher img {
+        width: 100%;
+        height: 36rem;
+    }
+
+    /* TELA CONTATO*/
+
+    .flex-contato {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        line-height: 3rem;
+    }
+
+    .flex-contato h4 {
+        font-size: 2.7rem;
+        margin-top: 2.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .contato-lists li {
+        list-style: none;
+    }
+
+    .contato-lists li a {
+        color: inherit;
+    }
+
+    .contato-icons img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .footer-copiright p {
+        padding-top: 1.5rem;
+    }
+
+    .whatsapp-button img{
+        width: 5.1rem;
+        height: 5.1rem;
+    } 
+
+}
+
+
+@media ((min-width: 801px) and (max-width: 1200px)) {
+
+    .menu-aside {
+        display: none;
+        text-align: center;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: rgb(71, 114, 91);
+        color: white;
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    .close-menu:checked~.menu-aside {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .whatsapp-button {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .espace-top {
+        padding-top: 2rem;
+    }
+
+    .inicio-content {
+        margin-top: 18rem;
+    }
+
+    .inicio-content h2 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* TELA PROJETOS */
+
+    .grid-projetos {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .projects-content h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-content p {
+        font-size: 1.6rem;
+    }
+
+    .projects-img img {
+        width: 100%;
+        height: 30rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .projects-img img:hover {
+        transition: none;
+        transform: none;
+    }
+
+    /* TELA ORÇAMENTOS */
+
+    #form label {
         margin-left: 0;
+    }
+
+    .span-required {
+        margin-left: 0;    
+    }
+
+    .orcamento-content {
+        margin-top: 12.5rem;
+    }
+
+    .orcamento-content h2 {
+        font-size: 3rem;
+        margin: 0 1rem;
     }
 
     .inputs {
@@ -473,5 +693,6 @@ a {
     .footer-copiright p {
         padding-top: 1.5rem;
     }
+
 
 }

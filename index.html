@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KL Decor</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <title>KL Decor</title>
 </head>
 
 <body>
@@ -75,22 +75,33 @@
         <div class="general-content orcamento-content">
             <h2>SOLICITAR ORÇAMENTO</h2>
 
-            <form action="/" method="post" class="form-request">
+            <form action="/" method="post" id="form">
 
-                <label for="input-person-name">Nome</label>
-                <input type="text" name="input-person-name" id="input-person-name" class="inputs">
+                <div>
+                    <label for="input-person-name">Nome <span class="asteristic">*</span></label>
+                    <input type="text" name="input-person-name" id="input-person-name" class="inputs required">
+                    <span class="span-required">O nome deve conter pelo menos 3 caracteres</span>
+                </div>
+                <div>
+                    <label for="input-person-email">Email <span class="asteristic">*</span></label>
+                    <input type="email" name="input-person-email" id="input-person-email" class="inputs required">
+                    <span class="span-required">E-mail inválido</span>
+                </div>
+                <div>
+                    <label for="input-person-telefone">Telefone</label>
+                    <input type="tel" name="input-person-telefone" maxlength="15" id="input-person-telefone"
+                        class="inputs inputCellphone">
 
-                <label for="input-person-email">Email</label>
-                <input type="email" name="input-person-email" id="input-person-email" class="inputs">
+                </div>
+                <div>
+                    <label for="input-person-description">Descricao <span class="asteristic">*</span></label>
+                    <textarea name="input-person-description" id="input-person-description" class="inputs input-description required" cols="30" rows="10" maxlength="500"></textarea>
+                    <span class="span-required">A descrição deve conter pelo menos 5 caracteres</span>
+                </div>
+                <div>
+                    <button type="submit" class="submit-button">Solicitar</button>
+                </div>
 
-                <label for="input-person-telefone">Telefone</label>
-                <input type="number" name="input-person-telefone" id="input-person-telefone" class="inputs">
-
-                <label for="input-person-description">Descricao</label>
-                <input type="text" name="input-person-description" id="input-person-description"
-                    class="inputs input-description">
-
-                <button type="submit" class="submit-button">Solicitar</button>
             </form>
         </div>
     </section>
@@ -224,17 +235,19 @@
 
     <footer>
         <div class="footer-copiright">
-            <p>@2023 - Todos os direitos reservados</p>
+            <p>@<span class="year"></span> - Todos os direitos reservados</p>
         </div>
     </footer>
 
     <div class="whatsapp-button">
-        <a href="https://wa.me/5561996473344?text=Olá! Gostaria de saber mais sobre a empresa e seus serviços"
+        <a href="https://wa.me/5561996497811?text=Olá! Gostaria de saber mais sobre a empresa e seus serviços"
             target="_blank">
             <img src="./assets/img/whatsapp-icon-fixed.png" alt="Fale conosco pelo WhatsApp"
                 title="Fale conosco pelo WhatsApp">
         </a>
     </div>
+
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
